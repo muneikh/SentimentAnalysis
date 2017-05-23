@@ -1,6 +1,10 @@
 import fasttext
 
-classifier = fasttext.supervised('train.txt', 'model', label_prefix='__label__')
+# train the classifier from scratch
+# classifier = fasttext.supervised('train.txt', 'model', label_prefix='__label__')
+
+# if the model already exists no need to train it again
+classifier = fasttext.load_model('model.bin', label_prefix='__label__')
 
 # result = classifier.test('test.txt')
 # print 'P@1:', result.precision

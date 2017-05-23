@@ -5,6 +5,7 @@
 Run the following commands:
 
 pip install Cython --install-option="--no-cython-compile"
+
 pip install fasttext
 
 ## Run:
